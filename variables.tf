@@ -80,7 +80,7 @@ variable "principle1" {
 
 variable "source_arn" {
   type = string
-  default = "s3 bucket arn"
+  default = "arn:aws:s3:::landlingbucketlakeformation"
 }
 
 variable "cwrulename" {
