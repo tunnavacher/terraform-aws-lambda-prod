@@ -20,17 +20,17 @@ variable "runtime" {
 
 variable "lambda_execution_role" {
   type = string
-  default = ""
+  default = "arn:aws:iam::732107147698:role/GlueLambdaExecutionRole"
 }
 
 variable "s3_bucket" {
  type = string
-  default = ""
+  default = "landlingbucketlakeformation"
 }
 
 variable "s3_key" {
  type = string
-  default = ""
+  default = "lambda_function.zip"
 }
 
 variable "lambda_layer_name" {
@@ -48,14 +48,9 @@ variable "compatible_runtimes" {
   default = "python3.8"
 }
 
-variable "bucketname" {
-  type = string
-  default = ""
-}
-
 variable "event_type" {
   type = string
-  default = ""
+  default = "s3:ObjectCreated:*"
 }
 
 #variable "prefix" {
