@@ -28,6 +28,11 @@ variable "s3_bucket" {
   default = "landlingbucketlakeformation"
 }
 
+variable "event_bucket_name" {
+ type = string
+  default = "landlingbucketlakeformation"
+}
+
 variable "s3_key" {
  type = string
   default = "lambda_function1.zip"
