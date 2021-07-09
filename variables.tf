@@ -1,4 +1,5 @@
 variable "region_name" {
+  description = "Region Name"
   type = string
   default = "us-east-1"
 }
