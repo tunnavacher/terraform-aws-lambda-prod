@@ -69,6 +69,10 @@ variable "layer_runtime" {
   #default = "python3.8"
 #}
 
+variable "bucketname" {
+  type = string
+  default = ""
+}
 variable "event_type" {
   type = string
   default = "s3:ObjectCreated:Put"
