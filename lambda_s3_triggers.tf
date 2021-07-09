@@ -1,7 +1,7 @@
 # Adding S3 bucket as trigger to my lambda and giving the permissions
 ##################
 resource "aws_s3_bucket_notification" "aws-test-lambda-trigger" {
-bucket = var.s3_bucket
+bucket = var.bucketname
 lambda_function {
 lambda_function_arn = aws_lambda_function.CrawlerStart_lambda.arn
 events              = [var.event_type]
