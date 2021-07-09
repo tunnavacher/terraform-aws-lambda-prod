@@ -1,11 +1,12 @@
 variable "region_name" {
+  description = "Region Name"
   type = string
   default = "us-east-1"
 }
 
-variable "function_name" {
+variable "function_name1" {
   type = string
-  default = "devlambdatest"
+  default = "Crawlerlambdatest1"
 }
 
 variable "lambda_handler" {
@@ -28,19 +29,34 @@ variable "s3_bucket" {
   default = "landlingbucketlakeformation"
 }
 
-variable "event_bucket_name" {
- type = string
-  default = "landlingbucketlakeformation"
-}
-
 variable "s3_key" {
  type = string
+  default = "lambda_function.zip"
+}
+
+variable "function_name2" {
+  type = string
+  default = "GlueJOblambdatest1"
+}
+
+variable "s3_key1" {
+  type = string
   default = "lambda_function1.zip"
 }
 
 variable "lambda_layer_name" {
   type = string
-  default = "layer_test_1"
+  default = "layer_dev_1"
+}
+
+variable "event_bucket_name" {
+ type = string
+  default = "landlingbucketlakeformation"
+}
+
+variable "s3_key2" {
+  type = string
+  default = "lambda_function1.zip"
 }
 
 variable "layer_runtime" {
@@ -48,25 +64,25 @@ variable "layer_runtime" {
   default = "python3.8"
 }
 
-variable "compatible_runtimes" {
-  type = string
-  default = "python3.8"
-}
+#variable "compatible_runtimes" {
+  #type = string
+  #default = "python3.8"
+#}
 
 variable "event_type" {
   type = string
-  default = "s3:ObjectCreated:*"
+  default = "s3:ObjectCreated:Put"
 }
 
-#variable "prefix" {
-  #type = string
-  #default = ""
-#}
+variable "prefix" {
+  type = string
+  default = "AWSLogs/"
+}
 
-#variable "suffix" {
-#  type = string
-  #default = ""
-#}
+variable "suffix" {
+  type = string
+  default = ".csv"
+}
 
 variable "statement_id1" {
   type = string
@@ -85,7 +101,7 @@ variable "principle1" {
 
 variable "source_arn" {
   type = string
-  default = "arn:aws:s3:::landlingbucketlakeformation"
+  default = ""
 }
 
 variable "cwrulename" {
@@ -93,14 +109,14 @@ variable "cwrulename" {
   default = "lambda_trigger_every-fifteen-minutes"
 }
 
-variable "Schedule" {
- type = string
-  default = "rate(15 minutes)"
-}
+#variable "Schedule" {
+ #type = string
+ # default = "rate(15 minutes)"
+#}
 
 variable "target_id" {
  type = string
-  default = "devlambdatest"
+  default = "GlueJOblambdatest1"
 }
 
 variable "statement_id2" {
