@@ -74,8 +74,8 @@ variable "bucketname" {
   default = ""
 }
 variable "event_type" {
-  type = list
-  default = ["s3:ObjectCreated:*"]
+  type = string
+  default = "s3:ObjectCreated:*"
 }
 
 variable "prefix" {
