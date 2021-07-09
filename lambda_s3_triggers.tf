@@ -5,8 +5,8 @@ bucket = var.bucketname
 lambda_function {
 lambda_function_arn = aws_lambda_function.CrawlerStart_lambda.arn
 events              = [var.event_type]
-filter_prefix       = var.prefix
-filter_suffix       = var.suffix
+#filter_prefix       = var.prefix
+#filter_suffix       = var.suffix
 }
 }
 
