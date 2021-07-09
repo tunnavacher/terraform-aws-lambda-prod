@@ -75,7 +75,7 @@ variable "bucketname" {
 }
 variable "event_type" {
   type = string
-  default = "s3:ObjectCreated:Put"
+  default = "s3:ObjectCreated:*"
 }
 
 variable "prefix" {
