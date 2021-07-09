@@ -15,5 +15,5 @@ statement_id  = var.statement_id1
 action        = var.action1
 function_name = aws_lambda_function.CrawlerStart_lambda.function_name
 principal = var.principle1
-source_arn = var.bucketname
+source_arn = var.source_arn
 }
