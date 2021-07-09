@@ -78,15 +78,15 @@ variable "event_type" {
   default = "s3:ObjectCreated:*"
 }
 
-variable "prefix" {
-  type = string
-  default = "AWSLogs/"
-}
+#variable "prefix" {
+ # type = string
+ # default = "AWSLogs/"
+#}
 
-variable "suffix" {
-  type = string
-  default = ".csv"
-}
+#variable "suffix" {
+ # type = string
+ # default = ".csv"
+#}
 
 variable "statement_id1" {
   type = string
