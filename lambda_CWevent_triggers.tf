@@ -15,7 +15,7 @@ resource "aws_cloudwatch_event_rule" "lambda_trigger_after_crawler_succeded" {
 	],
 	"detail": {
 		"crawlerName": [
-			"GlueJOblambdatest1"
+			"s3crawler"
 		],
 		"state": [
 			"Succeeded"
